@@ -4,7 +4,6 @@ html {
 
 body {
 	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-	font-size: 1rem;
 	display: flex;
     justify-content: center;
     align-items: center;
@@ -13,7 +12,7 @@ body {
 
 .container{
 	max-width: 1200px;
-	margin: 0 auto;
+	width: 90%;
 	display: flex;
     justify-content: center;
     align-items: center;
@@ -28,17 +27,17 @@ h3 {
 	font-weight: 700;
 }
 h1 {
-	font-size: 1.876rem;
+	font-size: 1.876em;
 }
 h2 {
-	font-size: 1.125rem;
+	font-size: 1.125em;
 }
 h3 {
-	font-size: .75rem;
+	font-size: .75em;
 }
 
 p {
-	font-size: .875rem;
+	font-size: .875em;
 	line-height: 21px;
     padding: 0 30px;
 }
@@ -46,7 +45,8 @@ p {
 /*The widths are in a percentage!*/
 header {
 	border-bottom: 3px solid #77a466;
-	margin: 0 auto;
+	text-align: center;
+	width: 100%;
 	display: flex;
     justify-content: center;
     align-items: center;
@@ -56,6 +56,8 @@ header {
 header h1 {
 	margin: 0;
 	padding: 38px 0;
+	border-bottom: 3px solid #77a466;
+	width: 100%
 }
 header h1 span {
 	color: #77a466;
@@ -63,60 +65,58 @@ header h1 span {
 
 header nav {
 	padding: 46px 0;
+	width: 100%;
 }
+
 header nav ul {
 	margin: 0;
 	padding: 0;
 }
+
 header nav ul li {
 	text-transform: uppercase;
 	font-weight: 700;
-	font-size: .875rem;
-	padding: 0 10px;
-	display: inline;
+	font-size: .875em;
+	padding: 10px 0;
+	list-style: none;
 }
+
 header nav ul li a{
 	text-decoration: none;
 	color:#77a466;
 }
 
 /*The widths are in a percentage!*/
+
 .top-section,
 .bottom-section {
-	margin: 0 auto;
 	display: flex;
     justify-content: center;
     align-items: center;
 	flex-flow: row wrap;
 }
 
-.main-image {
-	height: auto;
-}
 .main-image img {
 	width: 100%;
 	border-bottom: 3px solid #77a466;
 }
 
-.main-title {
-	height: auto;
-}
 .main-title h2 {
 	text-align: left;
 	padding: 5px 0;
 	color: #77a466;
 }
+
 .main-title p {
 	padding: 0;
-	font-size: 1rem;
+	font-size: 1em;
 	line-height: 25px;
 }
 
 .section-one,
 .section-two,
 .section-three {
-	width: 33%;
-	height: auto;
+	width: 100%;
 	border-top: 1px solid #eee;
 }
 
@@ -124,20 +124,11 @@ header nav ul li a{
 	padding: 10px 0;
 }
 
-.section-two {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
-}
-
-.section-two h3,
-.section-three h3 {
-	padding: 10px 30px;
-}
-
 .menu {
 	list-style: none;
 	padding: 0;
 }
+
 .menu li {
 	padding: 10px 0;
 	color:#77a466;
@@ -147,14 +138,19 @@ header nav ul li a{
 	color: #333;
 	font-size: 1rem;
 	line-height: 21px;
+	padding: 10px 0;
+	margin: 0;
 }
 
 .address {
 	font-size: 1rem;
 	line-height: 24px;
+	padding: 10px 0;
+	margin: 0;
 }
 
 /*The widths are in a percentage!*/
+
 footer {
 	border-top: 3px solid #eee;
 	margin: 0 auto;
@@ -164,9 +160,55 @@ footer {
     align-items: center;
 	flex-flow: row wrap;
 }
+
 footer span {
 	font-family: 'Galada', cursive;
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: .875rem;
+}
+
+
+@media all and (min-width: 768px)  {
+	/* Tablet syles here */
+.bottom-section {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	border-top: 1px solid #eee;
+}
+
+.section-two {
+	border-left: 1px solid #eee;
+	border-right: 1px solid #eee;
+	padding: 0 20px;
+}
+
+.section-one,
+.section-two,
+.section-three  {
+	flex-basis: 30%;
+	border-top: none;
+}
+}
+
+
+@media all and (min-width:1200px) {
+    /* Desktop styles here */
+ 
+header h1 {
+	border-bottom: none;
+	text-align: left;
+}
+
+header {
+	border-bottom: 3px solid #77a466;
+	justify-content: space-between;
+	flex-flow: row nowrap;
+}
+
+header nav ul {
+	display: flex;
+	justify-content: space-between;
+}
 }
